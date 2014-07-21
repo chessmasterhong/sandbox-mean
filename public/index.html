@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" data-ng-app="meanApp" data-ng-controller="meanController">
     <head>
         <meta charset="utf-8">
-        <title>MEAN Sandbox</title>
+
+        <title data-ng-bind="pageTitle + ' | Demo App'">Demo App</title>
+
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.20/angular.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+
+        <script src="scripts/app.js"></script>
+        <script src="scripts/controllers/meanController.js"></script>
     </head>
 
     <body>
-        <p>Hello world!</p>
+        <div data-ui-view></div>
     </body>
 </html>
