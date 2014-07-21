@@ -5,12 +5,20 @@ var meanApp = angular.module('meanApp', [
 ])
 .config(function($stateProvider, $urlRouterProvider) {
     $stateProvider
-        .state('home', {
-            url: '',
-            templateUrl: 'views/home.view.html',
+        .state('hello', {
+            url: '/hello',
+            templateUrl: 'partials/hello.partial.html',
             //contorller: ''
             data: {
-                pageTitle: 'Home'
+                pageTitle: 'Hello'
+            }
+        })
+        .state('bye', {
+            url: '/bye',
+            templateUrl: 'partials/bye.partial.html',
+            //contorller: ''
+            data: {
+                pageTitle: 'Bye'
             }
         })
 });
