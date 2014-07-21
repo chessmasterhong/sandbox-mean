@@ -1,23 +1,34 @@
+// Require needed modules
 var express = require('express');
 
-var PORT = 8080;
+// Define custom config variables
+var HOST = '127.0.0.1',
+    PORT = 8080;
 
+// Create an Express application
 var app = express();
 
+// Get an instance of the Express Router
 var router = express.Router();
 
+// Router will handle any requests with this endpoint depending on where router is "use()'d.
 router.get('/', function(req, res) {
+    // Returns a JSON response when user visits this endpoint
     res.json({
         title: 'Hello API',
         message: 'How are you?'
     });
 });
 
+// Register router routes by prefixing routes with /api
 app.use('/api', router);
 
-app.use(express.static(__dirname + '/public'));
+// Set the static files location
+// /public/index.html on the server will be /index.html to the client
+app.use(express.static('./public'));
 
-app.listen(PORT, function() {
-    console.log('Express server listening on port ' + PORT);
+// Start application server on specified host and port
+app.listen(PORT, HOST, function() {
+    console.log('Express server started on ' + HOST + ':' + PORT);
 });
 
