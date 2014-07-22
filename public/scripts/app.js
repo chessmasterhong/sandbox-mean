@@ -16,7 +16,7 @@ var meanApp = angular.module('meanApp', [
         .state('bye', {
             url: '/bye',
             templateUrl: 'partials/bye.partial.html',
-            //controller: ''
+            controller: 'byeController',
             data: {
                 pageTitle: 'Bye'
             }
