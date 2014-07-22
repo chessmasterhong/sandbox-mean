@@ -8,7 +8,7 @@ var meanApp = angular.module('meanApp', [
         .state('hello', {
             url: '/hello',
             templateUrl: 'partials/hello.partial.html',
-            //contorller: ''
+            controller: 'helloController',
             data: {
                 pageTitle: 'Hello'
             }
@@ -16,7 +16,7 @@ var meanApp = angular.module('meanApp', [
         .state('bye', {
             url: '/bye',
             templateUrl: 'partials/bye.partial.html',
-            //contorller: ''
+            //controller: ''
             data: {
                 pageTitle: 'Bye'
             }
